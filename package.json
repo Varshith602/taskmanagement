@@ -1,0 +1,26 @@
+{
+  "name": "task-management-application",
+  "version": "1.0.0",
+  "description": "Production-style Full-Stack Task Management Application",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "build:client": "npm run build --prefix client",
+    "test:e2e": "node server/e2eCheck.mjs"
+  },
+  "keywords": [
+    "task-management",
+    "mern",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "TaskFlow",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "main": "index.js"
+}
